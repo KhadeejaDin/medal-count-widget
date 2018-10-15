@@ -3,6 +3,10 @@ button {
     background: transparent;
 }
 
+button:focus {
+    outline: none;
+}
+
 .text-red {
     color: red;
 }
@@ -64,6 +68,10 @@ button {
     padding-left: 2rem;
 }
 
+.pad8px-top{
+    padding-top: 8px;
+}
+
 .mar0 {
     margin: 0;
 }
@@ -96,6 +104,10 @@ button {
     border-top: 2px solid grey;
 }
 
+.br-top-white2 {
+    border-top: 2px solid #ffffff;
+}
+
 .br-top-ltgray1 {
     border-top: 1px solid lightgray;
 } 
@@ -124,14 +136,12 @@ button {
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    display: inline-block;
     border: none;
 }
 
 .flag {
     /*background: url("https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png");*/
     background: url("../images/flags.png");
-    display: inline-block;
     width: 28px;
     height: 17px;
 }

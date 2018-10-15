@@ -29,7 +29,7 @@ const Table = (props) => (
             <li className="br-bt-ltgray1 display-bl center-align vert-pad8" key={country.code} id={country.code}>
                 <div className="col-5 display-i-bl">{index+1}</div>
                 <div className="col-13 display-i-bl">
-                    <div className="flag"></div>
+                    <div className="flag display-i-bl"></div>
                 </div>
                 <div className="col-30 display-i-bl left-align">{country.code}</div>
                 <div className="col-13 display-i-bl">{country.gold}</div>

@@ -29,9 +29,11 @@ class Button extends Component {
 
     render() {
         return (
-            <button className={this.state.active ? this.props.buttonClass + ' br-top-grey2' : this.props.buttonClass} onClick={() => this.handleButtonClick(this.props.type)}>
-                {this.props.type === 'total' ? 'TOTAL' : ''}
-            </button>
+            <div className={this.state.active ? 'br-top-grey2 pad8px-top' : 'pad8px-top br-top-white2'}>
+                <button className={this.props.buttonClass} onClick={() => this.handleButtonClick(this.props.type)}>
+                    {this.props.type === 'total' ? 'TOTAL' : ''}
+                </button>
+            </div>
         );
     };
 }
