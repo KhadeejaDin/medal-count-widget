@@ -1,5 +1,6 @@
+/* Helper functions to sort countries by their medal types */
 
-export function SortCountries(countries, sortType) {
+export function SortCountries(sortType, countries) {
     let sortedCountries = countries;
     switch (sortType) {
         case 'total':

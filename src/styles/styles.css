@@ -1,0 +1,214 @@
+button {
+    border: none;
+    background: transparent;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-grey {
+    color: grey;
+}
+
+.text-black {
+    color: black;
+}
+
+.bg-gold {
+    background-color: #CFB53B;
+}
+
+.bg-grey{
+    background-color: grey;
+}
+
+.bg-brown {
+    background-color: #8B4513;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.vert-pad8 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.pad0 {
+    padding: 0;
+}
+
+.pad1-right {
+    padding-right: 1rem;
+}
+
+.pad1-botm {
+    padding-bottom: 1rem;
+}
+
+.pad2 {
+    padding: 2rem;
+}
+
+.pad2-left {
+    padding-left: 2rem;
+}
+
+.mar0 {
+    margin: 0;
+}
+
+.mar8-botm {
+    margin-bottom: 8px;
+}
+
+.display-bl {
+    display: block;
+}
+
+.display-i-bl {
+    display: inline-block;
+}
+
+.font1 {
+    font-size: 1rem;
+} 
+
+.br-bt-ltgray1 {
+    border-bottom: 1px solid lightgray;
+} 
+
+.br-bt-grey2 {
+    border-bottom: 2px solid grey;
+}
+
+.br-top-grey2 {
+    border-top: 2px solid grey;
+}
+
+.br-top-ltgray1 {
+    border-top: 1px solid lightgray;
+} 
+
+.br-rt-ltgray1 {
+    border-right: 1px solid lightgray;
+} 
+
+.col-5 {
+    width: 5%;
+}
+
+.col-13 {
+    width: 13%;
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-48 {
+    width: 48%;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+}
+
+.flag {
+    /*background: url("https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png");*/
+    background: url("../images/flags.png");
+    display: inline-block;
+    width: 28px;
+    height: 17px;
+}
+
+#AUT .flag {
+    background-position: 0 0;
+}
+
+#BLR .flag {
+    background-position: 0 -17px;
+}
+
+#CAN .flag {
+    background-position: 0 -34px;
+}
+
+#CHN .flag {
+    background-position: 0 -51px;
+}
+
+#FRA .flag {
+    background-position: 0 -68px;
+}
+
+#GER .flag {
+    background-position: 0 -85px;
+}
+
+#ITA .flag {
+    background-position: 0 -102px;
+}
+
+#NED .flag {
+    background-position: 0 -119px;
+}
+
+#NOR .flag {
+    background-position: 0 -136px;
+}
+
+#RUS .flag {
+    background-position: 0 -153px;
+}
+
+#SUI .flag {
+    background-position: 0 -170px;
+}
+
+#SWE .flag {
+    background-position: 0 34px;
+}
+
+#USA .flag {
+    background-position: 0 17px;
+}
+
+@media (max-width: 400px) {
+    .pad2 {
+        padding: 1rem;
+    }
+    
+    .pad2-left {
+        padding-left: 1rem;
+    }
+
+    .circle {
+        height: 18px;
+        width: 18px;
+    }
+} 
+
+@media (max-width: 320px) {
+    .pad2 {
+        padding: 0;
+    }
+    
+    .pad2-left {
+        padding-left: 0;
+    }
+} 

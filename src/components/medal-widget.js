@@ -1,5 +1,11 @@
+/* A Medal Widget meant to be embedded on websites during the Olympic games. */
+/* The component which fetches countries information the first time it mounts. */
+/* It then sorts the countries with a sortCountries helper function. */
+/* Lastly it sends the sorted countries to the Table componenet. */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Table from './Table';
 import { SortCountries } from '../helpers/SortCountries.js';
 
 class MedalWidget extends Component {
@@ -15,7 +21,7 @@ class MedalWidget extends Component {
 
     state = {
         countries: [],
-        error: 'Cannot fetch countries data'
+        error: null
     };
 
     componentDidMount() {
@@ -32,38 +38,31 @@ class MedalWidget extends Component {
                             c = { ...c, total: c.gold + c.silver + c.bronze };
                             return c;
                     });
-                    this.sortCountries(countriesList);
+                    this.sortCountries(this.props.sort, countriesList);
                 },
                 (error) => {
                     this.setState({
-                        error
+                        error: 'Failed to fetch countries information.'
                     });
                 }
             )
     };
 
-    sortCountries = (countriesList, sort) => {
+    sortCountries = (sort, countriesList) => {
         this.setState({
-            countries: SortCountries(countriesList, sort || this.props.sort)
+            countries: SortCountries(sort, countriesList || this.state.countries)
         });
     };
 
     render() {
-        console.log(this.state.countries);
         return (
-            <ul>
-                {this.state.countries.map(item => (
-                    <li key={item.code}>
-                        {item.code} {item.total}
-                    </li>
-                ))}
-            </ul>
+            <React.Fragment>
+                <Table countries={this.state.countries} sortCountries={this.sortCountries} />
+                {this.state.error ? <div className="text-red pad2 font1 display-bl">{this.state.error}</div> : null}
+            </React.Fragment>
+            
         );
     };
 }
 
 export default MedalWidget;
-
-// <Table countries={this.state.countries} />
-
-//countries will always have 13 countries but table will display only 10
